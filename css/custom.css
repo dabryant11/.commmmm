@@ -5,8 +5,16 @@
 }
 
 .profile-image {
-  max-width: 300px;
+  max-width: 350px;
   border-radius: 24px;
+  margin-top: 80px;
+}
+
+.profile-sub-image {
+  /* max-width: 170px; */
+  max-height: 240px;
+  border-radius: 24px;
+  margin-right: 20px
 }
 
 

@@ -26,3 +26,14 @@ $(function () {
         }, 1000);
         e.preventDefault();
     });
+
+    map();	
+
+
+	
+
+});	
+
+
+
+
