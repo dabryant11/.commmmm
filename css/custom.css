@@ -5,9 +5,8 @@
 }
 
 .profile-image {
-  max-width: 350px;
-  border-radius: 24px;
-  margin-top: 80px;
+  max-width: 400px;
+  border-radius: 50px;
 }
 
 .profile-sub-image {
@@ -20,12 +19,13 @@
 
 .featured-project-card {
   width: 40%;
+  color: rgb(2, 2, 2);
   min-width: 300px;
   padding: 1.5rem 1.5rem 1.5rem;
   margin: 1rem 3.5rem;
   border: 1px solid var(--light-shade-color);
   border-radius: 5px;
-  background-color: rgb(246, 246, 250);
+  background-color: rgb(244, 219, 82);
   transition: all 1s ease;
 }
 
