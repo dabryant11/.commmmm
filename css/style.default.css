@@ -151,12 +151,12 @@ INTRO SECTION
 }
 
 .intro p {
-  font-family:'Bungee', cursive;
+  font-family:'Bungee', Arial, Helvetica, sans-serif;
   font-size: 10vh;
 }
 
 .intro h1 {
-  font-family: 'Cabin Sketch', cursive;
+  font-family: 'Cabin Sketch', Arial, Helvetica, sans-serif;
   font-size: 6vh;
 }
 
