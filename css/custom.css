@@ -4,6 +4,10 @@
   color:black;
 }
 
+.img-technology:hover {
+  cursor: pointer;
+}
+
 .profile-image {
   max-width: 400px;
   border-radius: 50px;

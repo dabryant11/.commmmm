@@ -151,8 +151,15 @@ INTRO SECTION
 }
 
 .intro p {
-  font-size: 1.35rem;
+  font-family:'Bungee', cursive;
+  font-size: 10vh;
 }
+
+.intro h1 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 6vh;
+}
+
 
 .content {
   position: relative;
