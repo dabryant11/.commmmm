@@ -1069,7 +1069,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: rgb(244, 219, 82);
+  color: rgb(67, 66, 66);
   text-decoration: none;
   border-bottom: none;
 }
