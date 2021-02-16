@@ -1069,9 +1069,9 @@ a {
 }
 
 a:hover, a:focus {
-  color: rgb(67, 66, 66);
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  border-bottom: none;
+  border-bottom: solid 6px #cfff20;
 }
 
 
