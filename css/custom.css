@@ -12,6 +12,7 @@
   min-width: 300px;
   max-width: 300px;
   border-radius: 15px;
+  box-shadow: 5px 5px 10px 0.5px rgba(0, 0, 0, 0.2);
 }
 
 .profile-sub-image {
@@ -32,6 +33,7 @@
   border-radius: 5px;
   background-color: rgb(244, 219, 82);
   transition: all 1s ease;
+  box-shadow: 5px 5px 10px 0.5px rgba(0, 0, 0, 0.2);
 }
 
 
