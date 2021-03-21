@@ -113,7 +113,7 @@ function App() {
                 </li>
                 <li className="nav-item">
                   <a
-                    href="https://drive.google.com/file/d/1ZY5OWTCxwgwIMQp4k5ybiwzgTZrZxxFX/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1P0PtdiuoGwP_IQZB4Vd_ysUPTajLx06Z/view"
                     className="nav-link link-scroll"
                     target="_blank"
                   >
@@ -128,7 +128,10 @@ function App() {
       {/* intro */}
       <section
         id="intro"
-        style={{ backgroundImage: 'url("img/anna.jpg")' }}
+        style={{
+          backgroundImage:
+            "https://upload.wikimedia.org/wikipedia/commons/8/82/Oakland_Bay_Bridge_Western_Part.jpg",
+        }}
         className="intro"
       >
         <div className="overlay" />
@@ -170,7 +173,7 @@ function App() {
               <p />
               <h5>
                 <a
-                  href="https://drive.google.com/file/d/1ZY5OWTCxwgwIMQp4k5ybiwzgTZrZxxFX/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1P0PtdiuoGwP_IQZB4Vd_ysUPTajLx06Z/view"
                   target="_blank"
                 >
                   download resume
@@ -300,35 +303,112 @@ function App() {
               </div>
               <div className="row">
                 <div className="featured-project-card">
-                  <a
-                    href="https://github.com/iannakim/NYC-School-Monitor_frontend"
-                    target="_blank"
-                  >
+                  <a href="" target="_blank">
                     <img
                       src="img/portfolio-1.jpg"
-                      alt="NYC SCHOOL MONITOR"
+                      alt="PLACEHOLDER"
                       className="img-fluid"
                       id="card"
                     />
                   </a>
                   <br />
                   <br />
-                  <h5>NYC School Monitor</h5>
+                  <h5>Responsible Representation</h5>
                   <p>
-                    A Directory of 400+ NYC High Schools where users can publish
-                    and share reviews. Think of it this way, there are number of
-                    sites for reviewing restaurants but there aren't any apps
-                    that lets parents and students leave reviews on our public
-                    education system. See the problem here? Now you can read all
-                    about that school down the block before sending your kids
-                    there for the next four years. (yikes)
+                    A Directory of Ohio Legislators, Bills, Committees, State
+                    Agenices and Campaign Finance reports
                   </p>
                   <h6>Tech Stack:</h6>
                   <p>
-                    React, Redux, Ruby on Rails API, NYC Open Data API, Google
-                    Maps API, PostgreSQL, Active Record Rack Cors, Active Model
+                    React, Ruby on Rails API, NYC Open Data API, Google Maps
+                    API, PostgreSQL, Active Record Rack Cors, Active Model
                     Serializer, BCrypt, JWT, Semantic UI, HTML, CSS
                   </p>
+                  <div className="icon-row">
+                    <h5>
+                      <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
+                        <i className="fa fa-youtube-play" aria-hidden="true" />
+                      </a>
+                      <a href="" target="_blank">
+                        <i className="fa fa-github-square" aria-hidden="true" />
+                      </a>
+                    </h5>
+                  </div>
+                </div>
+                <div className="featured-project-card">
+                  <a href="" target="_blank">
+                    <img
+                      src="img/portfolio-1.jpg"
+                      alt="PLACEHOLDER"
+                      className="img-fluid"
+                      id="card"
+                    />
+                  </a>
+                  <br />
+                  <br />
+                  <h5>Recycle NYC</h5>
+                  <p>A Directory of 1000+ NYC recycling locations</p>
+                  <h6>Tech Stack:</h6>
+                  <p>
+                    React, Ruby on Rails API, NYC Open Data API, Google Maps
+                    API, PostgreSQL, Active Record Rack Cors, Active Model
+                    Serializer, BCrypt, JWT, Semantic UI, HTML, CSS
+                  </p>
+                  <div className="icon-row">
+                    <h5>
+                      <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
+                        <i className="fa fa-youtube-play" aria-hidden="true" />
+                      </a>
+                      <a href="" target="_blank">
+                        <i className="fa fa-github-square" aria-hidden="true" />
+                      </a>
+                    </h5>
+                  </div>
+                </div>
+                <div className="featured-project-card">
+                  <a href="" target="_blank">
+                    <img
+                      src="img/portfolio-1.jpg"
+                      alt="PLACEHOLDER"
+                      className="img-fluid"
+                      id="card"
+                    />
+                  </a>
+                  <br />
+                  <br />
+                  <h5>Recipe Book</h5>
+                  <p>A Directory of Recipes</p>
+                  <h6>Tech Stack:</h6>
+                  <p>
+                    Ruby on Rails API, Javascript, Active Record Rack Cors,
+                    HTML, CSS
+                  </p>
+                  <div className="icon-row">
+                    <h5>
+                      <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
+                        <i className="fa fa-youtube-play" aria-hidden="true" />
+                      </a>
+                      <a href="" target="_blank">
+                        <i className="fa fa-github-square" aria-hidden="true" />
+                      </a>
+                    </h5>
+                  </div>
+                </div>
+                <div className="featured-project-card">
+                  <a href="" target="_blank">
+                    <img
+                      src="img/portfolio-1.jpg"
+                      alt="PLACEHOLDER"
+                      className="img-fluid"
+                      id="card"
+                    />
+                  </a>
+                  <br />
+                  <br />
+                  <h5>Finstagram</h5>
+                  <p>Instagram Clone</p>
+                  <h6>Tech Stack:</h6>
+                  <p>Ruby on Rails API</p>
                   <div className="icon-row">
                     <h5>
                       <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
@@ -358,7 +438,7 @@ function App() {
                 <div className="col-lg-6">
                   <p className="social">
                     <a
-                      href="https://www.linkedin.com/in/devannakim/"
+                      href="https://www.linkedin.com/in/darien-bryant-m-s/"
                       title
                       target="_blank"
                       className="linkedin"
@@ -366,23 +446,16 @@ function App() {
                       <i className="fa fa-linkedin-square" />
                     </a>
                     <a
-                      href="https://github.com/iannakim"
+                      href="https://github.com/dabryant11"
                       title
                       target="_blank"
                       className="github"
                     >
                       <i className="fa fa-github" aria-hidden="true" />
                     </a>
+
                     <a
-                      href="https://annacodes.medium.com/"
-                      title
-                      target="_blank"
-                      className="medium"
-                    >
-                      <i className="fa fa-medium" aria-hidden="true" />
-                    </a>
-                    <a
-                      href="mailto:dear.hyunji@gmail.com"
+                      href="mailto:darienbryant11@gmail.com"
                       title
                       target="_blank"
                       className="email"
