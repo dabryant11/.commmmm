@@ -102,6 +102,11 @@ function App() {
                   </a>
                 </li>
                 <li className="nav-item">
+                  <a href="#writings" className="nav-link link-scroll">
+                    Writings
+                  </a>
+                </li>
+                <li className="nav-item">
                   <a href="#contact" className="nav-link link-scroll">
                     Contact
                   </a>
@@ -232,7 +237,7 @@ function App() {
                   <div className="box">
                     <div className="icon">
                       <img
-                        src="img/rails.png"
+                        src="./img/rails.png"
                         alt=""
                         className="img-technology"
                       />
