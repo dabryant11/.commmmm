@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/darienbryant.com/static/css/main.c79d7132.chunk.css",
+    "main.js": "/darienbryant.com/static/js/main.92d008ae.chunk.js",
+    "main.js.map": "/darienbryant.com/static/js/main.92d008ae.chunk.js.map",
+    "runtime-main.js": "/darienbryant.com/static/js/runtime-main.a32efab9.js",
+    "runtime-main.js.map": "/darienbryant.com/static/js/runtime-main.a32efab9.js.map",
+    "static/js/2.db39837d.chunk.js": "/darienbryant.com/static/js/2.db39837d.chunk.js",
+    "static/js/2.db39837d.chunk.js.map": "/darienbryant.com/static/js/2.db39837d.chunk.js.map",
+    "static/js/3.60aa7dd0.chunk.js": "/darienbryant.com/static/js/3.60aa7dd0.chunk.js",
+    "static/js/3.60aa7dd0.chunk.js.map": "/darienbryant.com/static/js/3.60aa7dd0.chunk.js.map",
+    "index.html": "/darienbryant.com/index.html",
+    "static/css/main.c79d7132.chunk.css.map": "/darienbryant.com/static/css/main.c79d7132.chunk.css.map",
+    "static/js/2.db39837d.chunk.js.LICENSE.txt": "/darienbryant.com/static/js/2.db39837d.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/darienbryant.com/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a32efab9.js",
+    "static/js/2.db39837d.chunk.js",
+    "static/css/main.c79d7132.chunk.css",
+    "static/js/main.92d008ae.chunk.js"
+  ]
+}
