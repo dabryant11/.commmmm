@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import Darien from "./darien.jpeg";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
     // </div>
 
     <div>
+      <meta
+        name="google-site-verification"
+        content="DiBaQ6R2E1Xr3L4_HedjChOFKCb0JG5Hb1GIehbSowA"
+      />
       <div>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -141,6 +146,7 @@ function App() {
               <div className="col-8">
                 <p>Hi, I'm Darien</p>
                 <h1>I am a Software Engineer based in Oakland, CA.</h1>
+                <img src={Darien} alt="dariennnnn" />
               </div>
             </div>
           </div>
@@ -303,17 +309,26 @@ function App() {
               </div>
               <div className="row">
                 <div className="featured-project-card">
-                  <a href="" target="_blank">
+                  {/* <a href="" target="_blank">
                     <img
                       src="img/portfolio-1.jpg"
                       alt="PLACEHOLDER"
                       className="img-fluid"
                       id="card"
                     />
-                  </a>
+                  </a> */}
                   <br />
                   <br />
                   <h5>Responsible Representation</h5>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/kgUK2Kn8Xcc"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
                   <p>
                     A Directory of Ohio Legislators, Bills, Committees, State
                     Agenices and Campaign Finance reports
@@ -336,17 +351,26 @@ function App() {
                   </div>
                 </div>
                 <div className="featured-project-card">
-                  <a href="" target="_blank">
+                  {/* <a href="" target="_blank">
                     <img
                       src="img/portfolio-1.jpg"
                       alt="PLACEHOLDER"
                       className="img-fluid"
                       id="card"
                     />
-                  </a>
+                  </a> */}
                   <br />
                   <br />
                   <h5>Recycle NYC</h5>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Fb5q4aELEoE"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
                   <p>A Directory of 1000+ NYC recycling locations</p>
                   <h6>Tech Stack:</h6>
                   <p>
@@ -356,24 +380,24 @@ function App() {
                   </p>
                   <div className="icon-row">
                     <h5>
-                      <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
+                      {/* <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
                         <i className="fa fa-youtube-play" aria-hidden="true" />
                       </a>
                       <a href="" target="_blank">
                         <i className="fa fa-github-square" aria-hidden="true" />
-                      </a>
+                      </a> */}
                     </h5>
                   </div>
                 </div>
                 <div className="featured-project-card">
-                  <a href="" target="_blank">
+                  {/* <a href="" target="_blank">
                     <img
                       src="img/portfolio-1.jpg"
                       alt="PLACEHOLDER"
                       className="img-fluid"
                       id="card"
                     />
-                  </a>
+                  </a> */}
                   <br />
                   <br />
                   <h5>Recipe Book</h5>
@@ -395,14 +419,14 @@ function App() {
                   </div>
                 </div>
                 <div className="featured-project-card">
-                  <a href="" target="_blank">
+                  {/* <a href="" target="_blank">
                     <img
                       src="img/portfolio-1.jpg"
                       alt="PLACEHOLDER"
                       className="img-fluid"
                       id="card"
                     />
-                  </a>
+                  </a> */}
                   <br />
                   <br />
                   <h5>Finstagram</h5>
@@ -1059,6 +1083,75 @@ function App() {
             </main>
           </div>
         </div>
+      </div>
+
+      <div>
+        <title>About Me</title>
+        <meta name="description" content="this is website for about me" />
+        <meta name="author" content="Himanshu tiwari" />
+        <meta
+          name="viewpoint"
+          content="width=device-width , initial-scale=1.0"
+        />
+        <meta charSet="UTF-8" />
+        {/* Latest compiled and minified CSS */}
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="css/style2.css" />
+        <header className="main-header">
+          <h1>About Me</h1>
+          <h4>This section is going to introduce and connect you to me</h4>
+        </header>
+        <section className="intro">
+          <p>
+            Hello , you good fellow My name is Himanshu tiwari , i am an
+            evoloving web developer and a keen enthusiast for coding and
+            programming. I am basicaly a student , pursuing B.Sc (honours)
+            computer science from delhi university. I am an active guy and you
+            can connect with me on these social media platforms.
+          </p>
+        </section>
+        <section className="connect-me">
+          <article>
+            <h3>Instagram</h3>
+            <div className="Image" style={{ background: "url(insta.jpeg)" }} />
+            <p>
+              connect to me on instagram by following this link...{" "}
+              <a href="https://www.instagram.com/himanshu_tiwari15/">Connect</a>
+            </p>
+          </article>
+          <article>
+            <h3>Github</h3>
+            <div className="Image" style={{ background: "url(GitHub.png)" }} />
+            <p>
+              connect to me on Github by following this link...{" "}
+              <a href="https://github.com/Himanshutiwari15">Connect</a>
+            </p>
+          </article>
+          <article>
+            <h3>Quora</h3>
+            <div className="Image" style={{ background: "url(Quora.png)" }} />
+            <p>
+              connect to me on Quora by following this link...{" "}
+              <a href="https://www.quora.com/profile/Himanshu-Tiwari-%E0%A4%B9%E0%A4%BF%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%B6%E0%A5%81-%E0%A4%A4%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A5%80-1">
+                Connect
+              </a>
+            </p>
+          </article>
+        </section>
+        <footer className="main-footer">
+          <br />
+          © 2019
+          <br />
+          <a href="#">Terms and Conditions</a>
+        </footer>
+        {/* ============================= */}
+        {/* All your JavaScript comes now */}
+        {/* ============================= */}
+        {/* Bootstrap core JS */}
+        {/* Can place script tags with JavaScript files here */}
       </div>
     </div>
   );
