@@ -1,5 +1,12 @@
 import logo from "./logo.svg";
 import Darien from "./darien.jpeg";
+import Typing from "./typing.jpeg";
+import Ruby from "./ruby_icon.png";
+import styled from "styled-components";
+import YoutubeEmbed from "./YoutubeEmbed";
+
+// import styled from "styled-components";
+
 import "./App.css";
 
 function App() {
@@ -130,31 +137,8 @@ function App() {
           </div>
         </nav>
       </header>
-      {/* intro */}
-      <section
-        id="intro"
-        style={{
-          backgroundImage:
-            "https://upload.wikimedia.org/wikipedia/commons/8/82/Oakland_Bay_Bridge_Western_Part.jpg",
-        }}
-        className="intro"
-      >
-        <div className="overlay" />
-        <div className="content">
-          <div className="container clearfix">
-            <div className="row">
-              <div className="col-8">
-                <p>Hi, I'm Darien</p>
-                <h1>I am a Software Engineer based in Oakland, CA.</h1>
-                <img src={Darien} alt="dariennnnn" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* intro end*/}
-      {/* about*/}
-      <section id="about" className="section-inverse">
+
+      <section className="intro">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -168,11 +152,13 @@ function App() {
                 the industries of previous experience. Leveraging a background
                 in Federal, State and local policy issues focused on Primary and
                 Secondary Education has allowed me to be collaborative across
-                industries. Blended a career of athletics, diplomacy, and
-                political analysis with a personal passion for global education,
-                youth development, and equipping the next generation of global
-                leaders. Desire to impact sectors that are eager to implement
-                new technologies.
+                industries.
+              </p>
+              <p>
+                Blended a career of athletics, diplomacy, and political analysis
+                with a personal passion for global education, youth development,
+                and equipping the next generation of global leaders. Desire to
+                impact sectors that are eager to implement new technologies.
               </p>
 
               <br />
@@ -192,13 +178,12 @@ function App() {
               <p>
                 <img src="img/profile.png" alt="" className="profile-image" />
               </p>
-              {/* <p><img src="img/teacher.jpg" alt="" class="profile-sub-image"><img src="img/cooper.jpg" alt="" class="profile-sub-image"></p> */}
+              <img src={Darien} alt="db" />
             </div>
           </div>
         </div>
       </section>
-      {/* about end*/}
-      {/* Skills*/}
+
       <section id="skills" style={{ backgroundColor: "#15966b" }}>
         <div className="container">
           <div className="row skills">
@@ -220,11 +205,7 @@ function App() {
                 <div className="col-md-2">
                   <div className="box">
                     <div className="icon">
-                      <img
-                        src="img/ruby_icon.png"
-                        alt=""
-                        className="img-technology"
-                      />
+                      <img src={Ruby} alt="" className="img-technology" />
                     </div>
                     <h6>Ruby</h6>
                   </div>
@@ -297,26 +278,82 @@ function App() {
           </div>
         </div>
       </section>
-      {/* Skills end*/}
-      {/* Projects*/}
+
       <section id="projects" className="section-inverse">
         <div className="container clearfix">
           <div className="row">
             <div className="col-lg-12">
               <div className="row">
                 <h2 className="heading">Featured Projects</h2>
+                <CardContainer>
+                  <Card>
+                    <iframe
+                      width="100%"
+                      height="60%"
+                      src="https://www.youtube.com/embed/Fb5q4aELEoE"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                    <Video>
+                      <Discription>
+                        <h3 style={{ display: "inline" }}>MyFI</h3>
+                        <Language>React.js</Language>
+                        <Language>Rails API</Language>
+                        <p>
+                          A financial app to help people in debt plan to get out
+                          of debt and become financially independent.
+                        </p>
+                        <RepoLink
+                          href="https://github.com/jtray86/personal-fi-frontend"
+                          target="_blank"
+                        >
+                          Frontend Repo
+                        </RepoLink>
+                        |
+                        <RepoLink
+                          href="https://github.com/jtray86/personal-fi-backend"
+                          target="_blank"
+                        >
+                          Backend Repo
+                        </RepoLink>
+                      </Discription>
+                    </Video>
+                  </Card>
+                  <Card>
+                    <Video>
+                      <YoutubeEmbed embedId="vaaAz0gT8Ek" />
+                      <Discription>
+                        <h3 style={{ display: "inline" }}>The Pass</h3>
+                        <Language>React.js</Language>
+                        <Language>Rails API</Language>
+                        <p>
+                          A travel-social app for gay or male presenting queer
+                          people and straight/queer women to meet and plan
+                          travel togther.
+                        </p>
+                        <RepoLink
+                          href="https://github.com/jtray86/The-Pass-Frontend"
+                          target="_blank"
+                        >
+                          Frontend Repo
+                        </RepoLink>
+                        |
+                        <RepoLink
+                          href="https://github.com/jtray86/the-pass-backend"
+                          target="_blank"
+                        >
+                          Backend Repo
+                        </RepoLink>
+                      </Discription>
+                    </Video>
+                  </Card>
+                </CardContainer>
                 <p />
               </div>
               <div className="row">
                 <div className="featured-project-card">
-                  {/* <a href="" target="_blank">
-                    <img
-                      src="img/portfolio-1.jpg"
-                      alt="PLACEHOLDER"
-                      className="img-fluid"
-                      id="card"
-                    />
-                  </a> */}
                   <br />
                   <br />
                   <h5>Responsible Representation</h5>
@@ -351,14 +388,6 @@ function App() {
                   </div>
                 </div>
                 <div className="featured-project-card">
-                  {/* <a href="" target="_blank">
-                    <img
-                      src="img/portfolio-1.jpg"
-                      alt="PLACEHOLDER"
-                      className="img-fluid"
-                      id="card"
-                    />
-                  </a> */}
                   <br />
                   <br />
                   <h5>Recycle NYC</h5>
@@ -379,72 +408,7 @@ function App() {
                     Serializer, BCrypt, JWT, Semantic UI, HTML, CSS
                   </p>
                   <div className="icon-row">
-                    <h5>
-                      {/* <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
-                        <i className="fa fa-youtube-play" aria-hidden="true" />
-                      </a>
-                      <a href="" target="_blank">
-                        <i className="fa fa-github-square" aria-hidden="true" />
-                      </a> */}
-                    </h5>
-                  </div>
-                </div>
-                <div className="featured-project-card">
-                  {/* <a href="" target="_blank">
-                    <img
-                      src="img/portfolio-1.jpg"
-                      alt="PLACEHOLDER"
-                      className="img-fluid"
-                      id="card"
-                    />
-                  </a> */}
-                  <br />
-                  <br />
-                  <h5>Recipe Book</h5>
-                  <p>A Directory of Recipes</p>
-                  <h6>Tech Stack:</h6>
-                  <p>
-                    Ruby on Rails API, Javascript, Active Record Rack Cors,
-                    HTML, CSS
-                  </p>
-                  <div className="icon-row">
-                    <h5>
-                      <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
-                        <i className="fa fa-youtube-play" aria-hidden="true" />
-                      </a>
-                      <a href="" target="_blank">
-                        <i className="fa fa-github-square" aria-hidden="true" />
-                      </a>
-                    </h5>
-                  </div>
-                </div>
-                <div className="featured-project-card">
-                  {/* <a href="" target="_blank">
-                    <img
-                      src="img/portfolio-1.jpg"
-                      alt="PLACEHOLDER"
-                      className="img-fluid"
-                      id="card"
-                    />
-                  </a> */}
-                  <br />
-                  <br />
-                  <h5>Finstagram</h5>
-                  <p>Instagram Clone</p>
-                  <h6>Tech Stack:</h6>
-                  <p>Ruby on Rails API</p>
-                  <div className="icon-row">
-                    <h5>
-                      <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
-                        <i className="fa fa-youtube-play" aria-hidden="true" />
-                      </a>
-                      <a
-                        href="https://github.com/iannakim/NYC-School-Monitor_frontend"
-                        target="_blank"
-                      >
-                        <i className="fa fa-github-square" aria-hidden="true" />
-                      </a>
-                    </h5>
+                    <h5></h5>
                   </div>
                 </div>
               </div>
@@ -452,7 +416,6 @@ function App() {
           </div>
         </div>
       </section>
-      {/* Projects end*/}
       <footer id="contact" style={{ backgroundColor: "rgb(244, 219, 82)" }}>
         <div className="container">
           <div className="row">
@@ -1100,61 +1063,226 @@ function App() {
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
         />
         <link rel="stylesheet" href="css/style2.css" />
-        <header className="main-header">
-          <h1>About Me</h1>
-          <h4>This section is going to introduce and connect you to me</h4>
-        </header>
-        <section className="intro">
-          <p>
-            Hello , you good fellow My name is Himanshu tiwari , i am an
-            evoloving web developer and a keen enthusiast for coding and
-            programming. I am basicaly a student , pursuing B.Sc (honours)
-            computer science from delhi university. I am an active guy and you
-            can connect with me on these social media platforms.
-          </p>
-        </section>
-        <section className="connect-me">
-          <article>
-            <h3>Instagram</h3>
-            <div className="Image" style={{ background: "url(insta.jpeg)" }} />
-            <p>
-              connect to me on instagram by following this link...{" "}
-              <a href="https://www.instagram.com/himanshu_tiwari15/">Connect</a>
-            </p>
-          </article>
-          <article>
-            <h3>Github</h3>
-            <div className="Image" style={{ background: "url(GitHub.png)" }} />
-            <p>
-              connect to me on Github by following this link...{" "}
-              <a href="https://github.com/Himanshutiwari15">Connect</a>
-            </p>
-          </article>
-          <article>
-            <h3>Quora</h3>
-            <div className="Image" style={{ background: "url(Quora.png)" }} />
-            <p>
-              connect to me on Quora by following this link...{" "}
-              <a href="https://www.quora.com/profile/Himanshu-Tiwari-%E0%A4%B9%E0%A4%BF%E0%A4%AE%E0%A4%BE%E0%A4%82%E0%A4%B6%E0%A5%81-%E0%A4%A4%E0%A4%BF%E0%A4%B5%E0%A4%BE%E0%A4%B0%E0%A5%80-1">
-                Connect
-              </a>
-            </p>
-          </article>
-        </section>
-        <footer className="main-footer">
-          <br />
-          © 2019
-          <br />
-          <a href="#">Terms and Conditions</a>
-        </footer>
-        {/* ============================= */}
-        {/* All your JavaScript comes now */}
-        {/* ============================= */}
-        {/* Bootstrap core JS */}
-        {/* Can place script tags with JavaScript files here */}
       </div>
     </div>
   );
 }
 
 export default App;
+
+const Container = styled.div`
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 0;
+`;
+
+const ContainerGrid = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+  margin-top: 2rem;
+  background-color: rgb(1, 20, 43);
+  content: justified;
+  width: 100%;
+`;
+
+const Grid = styled.div`
+  background-color: rgb(1, 20, 43);
+  padding: 20px;
+  text-align: center;
+  color: #d7f7ed;
+`;
+const Image = styled.img`
+  height: 25rem;
+  border: #78ebbd solid 1px;
+  padding: 10px;
+  box-shadow: 5px 5px 8px 2px #44cfa5;
+  background-color: rgb(1, 27, 59);
+`;
+const AboutContent = styled.div`
+  width: 30rem;
+  margin-top: 16%;
+  font-size: large;
+`;
+
+const CardContainer = styled.div`
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const Card = styled.div`
+  width: 40%;
+
+  border: #78ebbd solid 1px;
+  padding: 10px;
+  box-shadow: 5px 5px 20px 2px #44cfa5;
+  margin: 3%;
+  background-color: rgb(1, 27, 59);
+`;
+const Video = styled.div`
+  width: 100%;
+`;
+const SkillsContanier = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  color: #78ebbd;
+  text-align: center;
+`;
+const Skills = styled.span`
+  padding: 1.5%;
+`;
+const Discription = styled.div`
+  padding: 2%;
+  color: #d7f7ed;
+`;
+
+const Language = styled.span`
+  float: right;
+  margin: 1.5%;
+  font-size: x-small;
+  border: solid 0.5px #78ebbd;
+  border-radius: 3px;
+  padding: 2px;
+`;
+
+const RepoLink = styled.a`
+  color: #78ebbd;
+  text-decoration: none;
+  padding: 2%;
+
+  position: relative;
+  z-index: 1;
+
+  :after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    background-color: #78ebbd;
+
+    z-index: -1;
+    transition: transform 0.3s;
+  }
+  :hover::after {
+    transform: scaleY(1);
+  }
+
+  :hover {
+    color: rgb(1, 27, 59);
+  }
+`;
+const Empty = styled.div`
+  height: 10rem;
+  width: 100%;
+`;
+
+const Containerr = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 2rem; */
+  align-items: center;
+  padding: 1rem;
+  min-height: 70vh;
+  .flex-item {
+    margin: 1rem;
+  }
+`;
+const PhotoContainer = styled.div`
+  width: 40vw;
+  height: 40vw;
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  img {
+    width: 100%;
+  }
+`;
+const TextContainer = styled.div`
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: 0;
+  h1 {
+    margin: 0;
+  }
+`;
+
+const Greeting = styled.h1`
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 5px;
+`;
+const AboutMe = styled.h2`
+  font-weight: normal;
+  text-align: center;
+  font-size: 1.17rem;
+  :nth-of-type(2) {
+    margin-top: 0;
+  }
+`;
+
+const SocialLinks = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 0.7rem; */
+  a {
+    margin: 0.35rem;
+  }
+`;
+const LogoLink = styled.a`
+  display: flex;
+  border-radius: 50%;
+  background: ${({ background }) => background};
+  width: 42px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.2s;
+  box-shadow: ${(props) => props.theme.shadow};
+  img {
+    width: 80%;
+  }
+  :hover {
+    transform: scale(1.2);
+  }
+  span {
+    display: none;
+  }
+`;
+
+const ButtonBar = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+`;
+
+const Button = styled.a`
+  padding: 8px;
+  background: ${(props) => props.theme.itemBackground};
+  border: 1px solid ${(props) => props.theme.resumeBorder};
+  box-shadow: ${(props) => props.theme.shadow};
+  outline: none;
+  transition: 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  color: ${(props) => props.theme.resumeColor};
+  font-weight: bold;
+  font-size: 0.9rem;
+  :hover {
+    transform: scale(1.1);
+  }
+`;
