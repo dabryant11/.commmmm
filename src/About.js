@@ -95,12 +95,7 @@ const Grid = styled.div`
   text-align: center;
   color: white;
 `;
-// const Image = styled.img`
-//   height: 25rem;
-//   border: #78ebbd solid 1px;
-//   padding: 100px;
-//   background-color: rgb(1, 27, 59);
-// `;
+
 const AboutContent = styled.div`
   width: 100%;
   margin-top: 0%;

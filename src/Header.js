@@ -5,7 +5,7 @@ import home from "./HOME_FILL.png";
 function Header() {
   return (
     <div className="nav">
-      <img height="32px" src={home} />
+      <img class="icon" height="32px" src={home} />
 
       <div class="dropdown">
         <button class="dropbtn">Culture</button>
