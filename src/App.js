@@ -8,6 +8,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import About from "./About";
 import TechStack from "./TechStack";
+import Projects from "./Projects";
 
 // import styled from "styled-components";
 
@@ -15,23 +16,6 @@ import "./App.css";
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-
     <div>
       <meta
         name="google-site-verification"
@@ -40,7 +24,6 @@ function App() {
       <div>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <title>DARIEN BRYANT</title>
         <meta name="description" content />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="all,follow" />
@@ -82,243 +65,9 @@ function App() {
           dangerouslySetInnerHTML={{ __html: "" }}
         />
       </div>
-      {/* navbar*/}
       <Header />
       <About />
-      <TechStack />
-
-      <section id="skills" style={{ backgroundColor: "#15966b" }}>
-        <div className="container">
-          <div className="row skills">
-            <div className="col-lg-12">
-              <h2 className="heading">Technical Skills</h2>
-              <div className="row">
-                <div className="col-md-2">
-                  <div className="box">
-                    <div className="icon">
-                      <img
-                        src="img/js_icon.png"
-                        alt=""
-                        className="img-technology"
-                      />
-                    </div>
-                    <h6>JavaScript</h6>
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="box">
-                    <div className="icon">
-                      <img src={Ruby} alt="" className="img-technology" />
-                    </div>
-                    <h6>Ruby</h6>
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="box">
-                    <div className="icon">
-                      <img
-                        src="img/react_icon.png"
-                        alt=""
-                        className="img-technology"
-                      />
-                    </div>
-                    <h6>React</h6>
-                  </div>
-                </div>
-
-                <div className="col-md-2">
-                  <div className="box">
-                    <div className="icon">
-                      <img
-                        src="./img/rails.png"
-                        alt=""
-                        className="img-technology"
-                      />
-                    </div>
-                    <h6>Ruby on Rails</h6>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-2">
-                  <div className="box">
-                    <div className="icon">
-                      <img
-                        src="img/css.png"
-                        alt=""
-                        className="img-technology"
-                      />
-                    </div>
-                    <h6>CSS</h6>
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="box">
-                    <div className="icon">
-                      <img
-                        src="img/html.png"
-                        alt=""
-                        className="img-technology"
-                      />
-                    </div>
-                    <h6>HTML5</h6>
-                  </div>
-                </div>
-                <div className="col-md-2">
-                  <div className="box">
-                    <div className="icon">
-                      <img
-                        src="img/bootstrap.png"
-                        alt=""
-                        className="img-technology"
-                      />
-                    </div>
-                    <h6>Bootstrap</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" className="section-inverse">
-        <div className="container clearfix">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="row">
-                <h2 className="heading">Featured Projects</h2>
-                <CardContainer>
-                  <Card>
-                    <iframe
-                      width="100%"
-                      height="60%"
-                      src="https://www.youtube.com/embed/Fb5q4aELEoE"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                    <Video>
-                      <Discription>
-                        <h3 style={{ display: "inline" }}>MyFI</h3>
-                        <Language>React.js</Language>
-                        <Language>Rails API</Language>
-                        <p>
-                          A financial app to help people in debt plan to get out
-                          of debt and become financially independent.
-                        </p>
-                        <RepoLink
-                          href="https://github.com/jtray86/personal-fi-frontend"
-                          target="_blank"
-                        >
-                          Frontend Repo
-                        </RepoLink>
-                        |
-                        <RepoLink
-                          href="https://github.com/jtray86/personal-fi-backend"
-                          target="_blank"
-                        >
-                          Backend Repo
-                        </RepoLink>
-                      </Discription>
-                    </Video>
-                  </Card>
-                  <Card>
-                    <Video>
-                      <YoutubeEmbed embedId="vaaAz0gT8Ek" />
-                      <Discription>
-                        <h3 style={{ display: "inline" }}>The Pass</h3>
-                        <Language>React.js</Language>
-                        <Language>Rails API</Language>
-                        <p>
-                          A travel-social app for gay or male presenting queer
-                          people and straight/queer women to meet and plan
-                          travel togther.
-                        </p>
-                        <RepoLink
-                          href="https://github.com/jtray86/The-Pass-Frontend"
-                          target="_blank"
-                        >
-                          Frontend Repo
-                        </RepoLink>
-                        |
-                        <RepoLink
-                          href="https://github.com/jtray86/the-pass-backend"
-                          target="_blank"
-                        >
-                          Backend Repo
-                        </RepoLink>
-                      </Discription>
-                    </Video>
-                  </Card>
-                </CardContainer>
-                <p />
-              </div>
-              <div className="row">
-                <div className="featured-project-card">
-                  <br />
-                  <br />
-                  <h5>Responsible Representation</h5>
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/kgUK2Kn8Xcc"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                  <p>
-                    A Directory of Ohio Legislators, Bills, Committees, State
-                    Agenices and Campaign Finance reports
-                  </p>
-                  <h6>Tech Stack:</h6>
-                  <p>
-                    React, Ruby on Rails API, NYC Open Data API, Google Maps
-                    API, PostgreSQL, Active Record Rack Cors, Active Model
-                    Serializer, BCrypt, JWT, Semantic UI, HTML, CSS
-                  </p>
-                  <div className="icon-row">
-                    <h5>
-                      <a href="https://youtu.be/XhGUIsml7eE" target="_blank">
-                        <i className="fa fa-youtube-play" aria-hidden="true" />
-                      </a>
-                      <a href="" target="_blank">
-                        <i className="fa fa-github-square" aria-hidden="true" />
-                      </a>
-                    </h5>
-                  </div>
-                </div>
-                <div className="featured-project-card">
-                  <br />
-                  <br />
-                  <h5>Recycle NYC</h5>
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/Fb5q4aELEoE"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                  <p>A Directory of 1000+ NYC recycling locations</p>
-                  <h6>Tech Stack:</h6>
-                  <p>
-                    React, Ruby on Rails API, NYC Open Data API, Google Maps
-                    API, PostgreSQL, Active Record Rack Cors, Active Model
-                    Serializer, BCrypt, JWT, Semantic UI, HTML, CSS
-                  </p>
-                  <div className="icon-row">
-                    <h5></h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Projects />
 
       <Footer />
       <div
@@ -326,7 +75,6 @@ function App() {
         className="lightboxOverlay"
         style={{ display: "none" }}
       />
-
       <div>
         <title>About Me</title>
         <meta name="description" content="this is website for about me" />
