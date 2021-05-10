@@ -1,6 +1,8 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import home from "./HOME_FILL.png";
+import Culture from "./Culture";
+import { Switch, Route, Link } from "react-router-dom";
 
 function Header() {
   return (
