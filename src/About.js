@@ -2,12 +2,13 @@ import Darien from "./circle-cropped.png";
 import Linkedin from "./Linkedin.png";
 import IG from "./IG.png";
 import GitHub from "./GitHub.png";
+import Hub from "./git.png";
 import Gmail from "./Gmail.png";
 import styled from "styled-components";
 
 function About() {
   return (
-    <section id="skills" style={{ backgroundColor: "black" }}>
+    <section id="skills" style={{ backgroundColor: "white" }}>
       <div>
         <Container>
           <ContainerGrid>
@@ -23,7 +24,7 @@ function About() {
                 <img src={IG} width="25" height="auto" />
               </a>
               <a target="_blank" href="https://github.com/dabryant11">
-                <img src={GitHub} width="25" height="auto" />
+                <img src={Hub} width="25" height="auto" />
               </a>
               <a
                 target="_blank"
@@ -34,8 +35,7 @@ function About() {
               <a target="_blank" href="mailto: darienbryant11@gmail.com">
                 <img src={Gmail} width="25" height="auto" />
               </a>
-              <br></br>
-              <br></br>
+
               <p>
                 <Resume
                   href="https://drive.google.com/file/d/1cnpZmagYbZo5DtfMnPkllCipPpzMxZvQ/view?ts=60921b91"
@@ -70,7 +70,7 @@ function About() {
 export default About;
 
 const Resume = styled.a`
-  color: yellow;
+  color: red;
   text-decoration: none;
   padding: 2%;
 `;
@@ -85,7 +85,7 @@ const ContainerGrid = styled.div`
   display: grid;
   text-align: center;
   width: 100%;
-  background-color: black;
+  background-color: white;
   color: #d7f7ed;
   grid-template-columns: auto auto;
 `;
@@ -93,7 +93,7 @@ const ContainerGrid = styled.div`
 const Grid = styled.div`
   padding: 20px;
   text-align: center;
-  color: white;
+  color: black;
 `;
 
 const AboutContent = styled.div`

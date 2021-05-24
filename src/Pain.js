@@ -133,12 +133,12 @@ const Card = styled.div`
   padding: 10px;
   margin-right: 30%;
   margin-left: 30%;
-  background-color: black;
+  background-color: white;
 `;
 
 const Description = styled.div`
   padding: 2%;
-  color: white;
+  color: black;
 `;
 
 const CardContainerr = styled.div`

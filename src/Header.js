@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className="nav">
       <a href="/home">
-        <img class="icon" height="32px" src={home} />
+        <img class="icon" height="32px" src={home} padding="20px" />
       </a>
 
       <div class="dropdown">
