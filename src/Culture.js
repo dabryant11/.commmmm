@@ -1,5 +1,5 @@
 function Culture() {
-  return <div>culture</div>;
+  return <div></div>;
 }
 
 export default Culture;
