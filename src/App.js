@@ -15,6 +15,20 @@ import Mirror from "./Mirror";
 import Fined from "./Fined";
 import Yourself from "./Yourself";
 import PairProgramming from "./PairProgramming";
+import Thanks from "./ThankYou";
+import Amerikkka from "./Amerikkka";
+import Nom from "./Nom";
+import Transit from "./Transit";
+import Sportz from "./Sportz";
+import Music from "./Music";
+import Experiences from "./Experiences";
+import Reality from "./Reality";
+import Cross from "./Cross";
+import Simplicity from "./Simplicity";
+import Chase from "./Chase";
+import Regulate from "./Regulate";
+import Psychologist from "./Psychologist";
+import Sauce from "./Sauce";
 import { Switch, Route, Link, Router, BrowserRouter } from "react-router-dom";
 
 // import "./App.css";
@@ -24,6 +38,7 @@ function App() {
     <div>
       <Header />
 
+      {/* <Home /> */}
       <BrowserRouter>
         <Switch>
           <Route path="/home">
@@ -64,6 +79,48 @@ function App() {
           </Route>
           <Route path="/pain">
             <Pain />
+          </Route>
+          <Route path="/thanks">
+            <Thanks />
+          </Route>
+          <Route path="/amerikkka">
+            <Amerikkka />
+          </Route>
+          <Route path="/nom">
+            <Nom />
+          </Route>
+          <Route path="/transit">
+            <Transit />
+          </Route>
+          <Route path="/sportz">
+            <Sportz />
+          </Route>
+          <Route path="/music">
+            <Music />
+          </Route>
+          <Route path="/experiences">
+            <Experiences />
+          </Route>
+          <Route path="/reality">
+            <Reality />
+          </Route>
+          <Route path="/cross">
+            <Cross />
+          </Route>
+          <Route path="/simplicity">
+            <Simplicity />
+          </Route>
+          <Route path="/chase">
+            <Chase />
+          </Route>
+          <Route path="/regulate">
+            <Regulate />
+          </Route>
+          <Route path="/psychologist">
+            <Psychologist />
+          </Route>
+          <Route path="/sauce">
+            <Sauce />
           </Route>
         </Switch>
       </BrowserRouter>

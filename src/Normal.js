@@ -8,8 +8,10 @@ function Normal() {
         <CardContainerr>
           <Card>
             <Description>
-              <h1> The New Normal</h1>
-              <p>January 4, 2016</p>
+              <center>
+                <h1> The New Normal</h1>
+                <h4>January 4, 2016</h4>
+              </center>
               <p>
                 &ldquo;Once in a while it really hits people that they
                 don&rsquo;t have to experience the world in the way they have
@@ -190,12 +192,12 @@ const Card = styled.div`
   padding: 10px;
   margin-right: 30%;
   margin-left: 30%;
-  background-color: black;
+  background-color: white;
 `;
 
 const Description = styled.div`
   padding: 2%;
-  color: white;
+  color: black;
 `;
 
 const CardContainerr = styled.div`

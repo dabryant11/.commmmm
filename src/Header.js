@@ -8,9 +8,13 @@ function Header() {
   return (
     <div className="nav">
       <a href="/home">
-        <img class="icon" height="32px" src={home} padding="20px" />
+        <img
+          class="icon"
+          height="32px"
+          src={home}
+          style={{ marginBottom: "-10px", marginLeft: "10px" }}
+        />
       </a>
-
       <div class="dropdown">
         <button class="dropbtn">Culture</button>
         <div class="dropdown-content">
@@ -25,25 +29,27 @@ function Header() {
       <div class="dropdown">
         <button class="dropbtn">Marketing</button>
         <div class="dropdown-content">
-          <a href="/ten">Distinguishing Cultural {"&"} Universal Experiences</a>
-          <a href="/ten">Merging Sci-Fi {"&"} Reality</a>
-          <a href="/ten">Look Before You Cross</a>
-          <a href="/ten">Revolution of Simplicity</a>
-          <a href="/ten">The Chase</a>
-          <a href="/ten">Innovation or Regulation</a>
-          <a href="/ten">Rise of the Cyber Psychologist</a>
-          <a href="/ten">Lost in the Sauce</a>
+          <a href="/experiences">
+            Distinguishing Cultural {"&"} Universal Experiences
+          </a>
+          <a href="/reality">Merging Sci-Fi {"&"} Reality</a>
+          <a href="/cross">Look Before You Cross</a>
+          <a href="/simplicity">Revolution of Simplicity</a>
+          <a href="/chase">The Chase</a>
+          <a href="/regulate">Innovation or Regulation</a>
+          <a href="/psychologist">Rise of the Cyber Psychologist</a>
+          <a href="/sauce">Lost in the Sauce</a>
         </div>
       </div>
       <div class="dropdown">
         <button class="dropbtn">Travel</button>
         <div class="dropdown-content">
-          <a href="/ten">Thank You</a>
-          <a href="/ten">Amerikkka</a>
-          <a href="/ten">nomMmmmm</a>
-          <a href="/ten">Transit</a>
-          <a href="/ten">SportZ</a>
-          <a href="/ten">Music</a>
+          <a href="/thanks">Thank You</a>
+          <a href="/amerikkka">Amerikkka</a>
+          <a href="/nom">nomMmmmm</a>
+          <a href="/transit">Transit</a>
+          <a href="/sportz">SportZ</a>
+          <a href="/music">Music</a>
         </div>
       </div>
       <div class="dropdown">
