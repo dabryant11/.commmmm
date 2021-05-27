@@ -62,6 +62,17 @@ function Header() {
           <a href="/mirror">Mirror Mirror on the Wall</a>
         </div>
       </div>
+      <div class="dropdown">
+        <button class="dropbtn">Resume</button>
+        <div class="dropdown-content">
+          <a
+            href="https://drive.google.com/file/d/1cnpZmagYbZo5DtfMnPkllCipPpzMxZvQ/view?ts=60921b91"
+            target="_blank"
+          >
+            Resume
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
