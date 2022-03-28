@@ -36,10 +36,9 @@ import { Switch, Route, Link, Router, BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <div>
-      <Header />
-
       {/* <Home /> */}
       <BrowserRouter>
+        <Header />
         <Switch>
           <Route path="/home">
             <Home />

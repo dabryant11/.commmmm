@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import home from "./HOME_FILL.png";
 import Culture from "./Culture";
 import { Switch, Route, Link } from "react-router-dom";
@@ -44,7 +43,8 @@ function Header() {
       <div class="dropdown">
         <button class="dropbtn">Travel</button>
         <div class="dropdown-content">
-          <a href="/thanks">Thank You</a>
+          <Link to="/thanks"> Thank You</Link>
+          {/* <a href="/thanks">Thank You</a> */}
           <a href="/amerikkka">Amerikkka</a>
           <a href="/nom">nomMmmmm</a>
           <a href="/transit">Transit</a>

@@ -1,0 +1,498 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "constructs.Construct",
+          "version": "10.0.98"
+        }
+      },
+      "Homepage": {
+        "id": "Homepage",
+        "path": "Homepage",
+        "children": {
+          "StaticSite": {
+            "id": "StaticSite",
+            "path": "Homepage/StaticSite",
+            "children": {
+              "Zone": {
+                "id": "Zone",
+                "path": "Homepage/StaticSite/Zone",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.17.0"
+                }
+              },
+              "SiteBucket": {
+                "id": "SiteBucket",
+                "path": "Homepage/StaticSite/SiteBucket",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "Homepage/StaticSite/SiteBucket/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                      "aws:cdk:cloudformation:props": {
+                        "bucketName": "darienbryant.com",
+                        "websiteConfiguration": {
+                          "indexDocument": "index.html",
+                          "errorDocument": "index.html"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.CfnBucket",
+                      "version": "2.17.0"
+                    }
+                  },
+                  "Policy": {
+                    "id": "Policy",
+                    "path": "Homepage/StaticSite/SiteBucket/Policy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "Homepage/StaticSite/SiteBucket/Policy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
+                          "aws:cdk:cloudformation:props": {
+                            "bucket": {
+                              "Ref": "StaticSiteSiteBucket1A888BC8"
+                            },
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "s3:GetObject",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "AWS": "*"
+                                  },
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        {
+                                          "Fn::GetAtt": [
+                                            "StaticSiteSiteBucket1A888BC8",
+                                            "Arn"
+                                          ]
+                                        },
+                                        "/*"
+                                      ]
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3.CfnBucketPolicy",
+                          "version": "2.17.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketPolicy",
+                      "version": "2.17.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3.Bucket",
+                  "version": "2.17.0"
+                }
+              },
+              "SiteCertificate": {
+                "id": "SiteCertificate",
+                "path": "Homepage/StaticSite/SiteCertificate",
+                "children": {
+                  "CertificateRequestorFunction": {
+                    "id": "CertificateRequestorFunction",
+                    "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction",
+                    "children": {
+                      "ServiceRole": {
+                        "id": "ServiceRole",
+                        "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/ServiceRole",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/ServiceRole/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "Service": "lambda.amazonaws.com"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "managedPolicyArns": [
+                                  {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                      ]
+                                    ]
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                              "version": "2.17.0"
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/ServiceRole/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": [
+                                            "acm:RequestCertificate",
+                                            "acm:DescribeCertificate",
+                                            "acm:DeleteCertificate",
+                                            "acm:AddTagsToCertificate"
+                                          ],
+                                          "Effect": "Allow",
+                                          "Resource": "*"
+                                        },
+                                        {
+                                          "Action": "route53:GetChange",
+                                          "Effect": "Allow",
+                                          "Resource": "*"
+                                        },
+                                        {
+                                          "Action": "route53:changeResourceRecordSets",
+                                          "Effect": "Allow",
+                                          "Resource": {
+                                            "Fn::Join": [
+                                              "",
+                                              [
+                                                "arn:",
+                                                {
+                                                  "Ref": "AWS::Partition"
+                                                },
+                                                ":route53:::hostedzone/Z04891011NDWMZUJ0A3GP"
+                                              ]
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "StaticSiteSiteCertificateCertificateRequestorFunctionServiceRoleDefaultPolicyFC20309A",
+                                    "roles": [
+                                      {
+                                        "Ref": "StaticSiteSiteCertificateCertificateRequestorFunctionServiceRole7FA09955"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                                  "version": "2.17.0"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.Policy",
+                              "version": "2.17.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.Role",
+                          "version": "2.17.0"
+                        }
+                      },
+                      "Code": {
+                        "id": "Code",
+                        "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/Code",
+                        "children": {
+                          "Stage": {
+                            "id": "Stage",
+                            "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/Code/Stage",
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.AssetStaging",
+                              "version": "2.17.0"
+                            }
+                          },
+                          "AssetBucket": {
+                            "id": "AssetBucket",
+                            "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/Code/AssetBucket",
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                              "version": "2.17.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                          "version": "2.17.0"
+                        }
+                      },
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                          "aws:cdk:cloudformation:props": {
+                            "code": {
+                              "s3Bucket": "cdk-hnb659fds-assets-503906830970-us-east-1",
+                              "s3Key": "cdedd6632172f845dffdcb60b0ef32d70710bab092ddc86547f614bf0f5c873f.zip"
+                            },
+                            "role": {
+                              "Fn::GetAtt": [
+                                "StaticSiteSiteCertificateCertificateRequestorFunctionServiceRole7FA09955",
+                                "Arn"
+                              ]
+                            },
+                            "handler": "index.certificateRequestHandler",
+                            "runtime": "nodejs12.x",
+                            "timeout": 900
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                          "version": "2.17.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.Function",
+                      "version": "2.17.0"
+                    }
+                  },
+                  "CertificateRequestorResource": {
+                    "id": "CertificateRequestorResource",
+                    "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorResource",
+                    "children": {
+                      "Default": {
+                        "id": "Default",
+                        "path": "Homepage/StaticSite/SiteCertificate/CertificateRequestorResource/Default",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.CfnResource",
+                          "version": "2.17.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CustomResource",
+                      "version": "2.17.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_certificatemanager.DnsValidatedCertificate",
+                  "version": "2.17.0"
+                }
+              },
+              "Distribution": {
+                "id": "Distribution",
+                "path": "Homepage/StaticSite/Distribution",
+                "children": {
+                  "CFDistribution": {
+                    "id": "CFDistribution",
+                    "path": "Homepage/StaticSite/Distribution/CFDistribution",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::CloudFront::Distribution",
+                      "aws:cdk:cloudformation:props": {
+                        "distributionConfig": {
+                          "enabled": true,
+                          "defaultRootObject": "index.html",
+                          "httpVersion": "http2",
+                          "priceClass": "PriceClass_100",
+                          "ipv6Enabled": true,
+                          "origins": [
+                            {
+                              "id": "origin1",
+                              "domainName": {
+                                "Fn::Select": [
+                                  2,
+                                  {
+                                    "Fn::Split": [
+                                      "/",
+                                      {
+                                        "Fn::GetAtt": [
+                                          "StaticSiteSiteBucket1A888BC8",
+                                          "WebsiteURL"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              "customOriginConfig": {
+                                "httpPort": 80,
+                                "httpsPort": 443,
+                                "originKeepaliveTimeout": 5,
+                                "originReadTimeout": 30,
+                                "originProtocolPolicy": "http-only",
+                                "originSslProtocols": [
+                                  "TLSv1.2"
+                                ]
+                              },
+                              "connectionAttempts": 3,
+                              "connectionTimeout": 10
+                            }
+                          ],
+                          "defaultCacheBehavior": {
+                            "allowedMethods": [
+                              "GET",
+                              "HEAD",
+                              "OPTIONS"
+                            ],
+                            "cachedMethods": [
+                              "GET",
+                              "HEAD"
+                            ],
+                            "compress": true,
+                            "forwardedValues": {
+                              "queryString": false,
+                              "cookies": {
+                                "forward": "none"
+                              }
+                            },
+                            "targetOriginId": "origin1",
+                            "viewerProtocolPolicy": "redirect-to-https"
+                          },
+                          "aliases": [
+                            "darienbryant.com"
+                          ],
+                          "viewerCertificate": {
+                            "acmCertificateArn": {
+                              "Fn::GetAtt": [
+                                "StaticSiteSiteCertificateCertificateRequestorResourceB92D481B",
+                                "Arn"
+                              ]
+                            },
+                            "sslSupportMethod": "sni-only",
+                            "minimumProtocolVersion": "TLSv1.1_2016"
+                          }
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_cloudfront.CfnDistribution",
+                      "version": "2.17.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_cloudfront.CloudFrontWebDistribution",
+                  "version": "2.17.0"
+                }
+              },
+              "ARecord": {
+                "id": "ARecord",
+                "path": "Homepage/StaticSite/ARecord",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "Homepage/StaticSite/ARecord/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Route53::RecordSet",
+                      "aws:cdk:cloudformation:props": {
+                        "name": "darienbryant.com.",
+                        "type": "A",
+                        "aliasTarget": {
+                          "hostedZoneId": {
+                            "Fn::FindInMap": [
+                              "AWSCloudFrontPartitionHostedZoneIdMap",
+                              {
+                                "Ref": "AWS::Partition"
+                              },
+                              "zoneId"
+                            ]
+                          },
+                          "dnsName": {
+                            "Fn::GetAtt": [
+                              "StaticSiteDistributionCFDistribution047BDAAA",
+                              "DomainName"
+                            ]
+                          }
+                        },
+                        "hostedZoneId": "Z04891011NDWMZUJ0A3GP"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_route53.CfnRecordSet",
+                      "version": "2.17.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_route53.ARecord",
+                  "version": "2.17.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.0.98"
+            }
+          },
+          "AWSCloudFrontPartitionHostedZoneIdMap": {
+            "id": "AWSCloudFrontPartitionHostedZoneIdMap",
+            "path": "Homepage/AWSCloudFrontPartitionHostedZoneIdMap",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnMapping",
+              "version": "2.17.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "Homepage/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "Homepage/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.17.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.0.98"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.17.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "aws-cdk-lib.App",
+      "version": "2.17.0"
+    }
+  }
+}

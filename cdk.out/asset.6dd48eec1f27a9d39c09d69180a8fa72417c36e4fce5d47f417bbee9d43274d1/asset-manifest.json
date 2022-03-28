@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "./static/css/main.07339b87.chunk.css",
+    "main.js": "./static/js/main.dc471adf.chunk.js",
+    "main.js.map": "./static/js/main.dc471adf.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.6f2cbd82.js",
+    "runtime-main.js.map": "./static/js/runtime-main.6f2cbd82.js.map",
+    "static/js/2.092e2fe2.chunk.js": "./static/js/2.092e2fe2.chunk.js",
+    "static/js/2.092e2fe2.chunk.js.map": "./static/js/2.092e2fe2.chunk.js.map",
+    "static/js/3.ebee3573.chunk.js": "./static/js/3.ebee3573.chunk.js",
+    "static/js/3.ebee3573.chunk.js.map": "./static/js/3.ebee3573.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.07339b87.chunk.css.map": "./static/css/main.07339b87.chunk.css.map",
+    "static/js/2.092e2fe2.chunk.js.LICENSE.txt": "./static/js/2.092e2fe2.chunk.js.LICENSE.txt",
+    "static/media/2-pic.dbcccd6a.jpeg": "./static/media/2-pic.dbcccd6a.jpeg",
+    "static/media/3-pic.905f1fd9.jpeg": "./static/media/3-pic.905f1fd9.jpeg",
+    "static/media/5-pic.a2259466.jpeg": "./static/media/5-pic.a2259466.jpeg",
+    "static/media/Gmail.4f10d6db.png": "./static/media/Gmail.4f10d6db.png",
+    "static/media/HOME_FILL.2437146c.png": "./static/media/HOME_FILL.2437146c.png",
+    "static/media/IG.0963b7a5.png": "./static/media/IG.0963b7a5.png",
+    "static/media/circle-cropped.913ec6ad.png": "./static/media/circle-cropped.913ec6ad.png",
+    "static/media/gz_stranded.064fad88.jpeg": "./static/media/gz_stranded.064fad88.jpeg",
+    "static/media/img_0179.2ba3ecc9.jpeg": "./static/media/img_0179.2ba3ecc9.jpeg",
+    "static/media/img_02231.737720df.jpeg": "./static/media/img_02231.737720df.jpeg",
+    "static/media/img_0448.4dd53a14.jpeg": "./static/media/img_0448.4dd53a14.jpeg",
+    "static/media/img_0544.9559ee8b.jpeg": "./static/media/img_0544.9559ee8b.jpeg",
+    "static/media/img_5506.0b7a2a29.jpeg": "./static/media/img_5506.0b7a2a29.jpeg",
+    "static/media/img_6806.a5fb96ec.jpeg": "./static/media/img_6806.a5fb96ec.jpeg",
+    "static/media/img_7137.7d7f0b4f.jpeg": "./static/media/img_7137.7d7f0b4f.jpeg",
+    "static/media/img_7489.57a18e59.jpeg": "./static/media/img_7489.57a18e59.jpeg",
+    "static/media/img_7541.bb94e703.jpeg": "./static/media/img_7541.bb94e703.jpeg",
+    "static/media/img_7709.421b89c9.jpeg": "./static/media/img_7709.421b89c9.jpeg",
+    "static/media/russ.bc56fc24.jpeg": "./static/media/russ.bc56fc24.jpeg",
+    "static/media/trump-mag.37ab5f13.jpeg": "./static/media/trump-mag.37ab5f13.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f2cbd82.js",
+    "static/js/2.092e2fe2.chunk.js",
+    "static/css/main.07339b87.chunk.css",
+    "static/js/main.dc471adf.chunk.js"
+  ]
+}

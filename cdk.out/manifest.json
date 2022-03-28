@@ -1,0 +1,118 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Homepage.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Homepage.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Homepage": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://503906830970/us-east-1",
+      "properties": {
+        "templateFile": "Homepage.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::503906830970:role/cdk-hnb659fds-deploy-role-503906830970-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::503906830970:role/cdk-hnb659fds-cfn-exec-role-503906830970-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-503906830970-us-east-1/42aa8bdadf04ccbba2d7706424ba12e4434c71f5343888bc800f12da40b8d626.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Homepage.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::503906830970:role/cdk-hnb659fds-lookup-role-503906830970-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Homepage.assets"
+      ],
+      "metadata": {
+        "/Homepage/StaticSite/SiteBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucket1A888BC8"
+          }
+        ],
+        "/Homepage/StaticSite/SiteBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucketPolicyD7934718"
+          }
+        ],
+        "/Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteCertificateCertificateRequestorFunctionServiceRole7FA09955"
+          }
+        ],
+        "/Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteCertificateCertificateRequestorFunctionServiceRoleDefaultPolicyFC20309A"
+          }
+        ],
+        "/Homepage/StaticSite/SiteCertificate/CertificateRequestorFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteCertificateCertificateRequestorFunctionFCF50CB3"
+          }
+        ],
+        "/Homepage/StaticSite/SiteCertificate/CertificateRequestorResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteCertificateCertificateRequestorResourceB92D481B"
+          }
+        ],
+        "/Homepage/StaticSite/Distribution/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteDistributionCFDistribution047BDAAA"
+          }
+        ],
+        "/Homepage/StaticSite/ARecord/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteARecord96C86507"
+          }
+        ],
+        "/Homepage/AWSCloudFrontPartitionHostedZoneIdMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCloudFrontPartitionHostedZoneIdMap"
+          }
+        ],
+        "/Homepage/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Homepage/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Homepage/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Homepage"
+    }
+  }
+}
